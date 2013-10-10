@@ -32,11 +32,7 @@ import core.docvert_storage
 import core.docvert_exception
 import core.document_type
 
-<<<<<<< HEAD
 # START DEFAULT CONFIG
-=======
-# START CONFIG
->>>>>>> ca25f1f60389d12a751bfc7f535fa7eb257cc7dd
 theme='actgov'
 host='localhost'
 port=8080
@@ -261,4 +257,3 @@ except socket.error, e:
         print 'ERROR: %s:%i already in use.\nTry another port? Use command line parameter -H HOST or -p PORT to change it.' % (host, port)
     else:
         raise
-
