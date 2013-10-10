@@ -74,7 +74,7 @@ To install, from the intended working directory execute the install script:
 
 **Note:** You may have to make the downloaded shell script executable if it errors when running. Use `chmod`:
 
-    chmod +x ./install-docvert.sh
+    chmod +x install-docvert.sh
 
 To deploy on other systems use their respective package managers to install the required dependencies.
 
