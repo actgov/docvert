@@ -19,7 +19,7 @@
   
   <body onunload="" class="index-page">
     <nav>
-      <ul id="main">
+      <ul id="nav-main">
     		<li><a href="mailto:pascal.klein@act.gov.au">Contact</a></li>
         <li><a href="tests">Tests</a></li>
         <li class="current">Web Service</li>
