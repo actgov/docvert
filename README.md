@@ -1,13 +1,26 @@
-Docvert 5.1
-=============
+Docvert-agov 5.1
+===============
 
-Converts Word Processor office files (e.g. .DOC files) to OpenDocument, DocBook, and structured HTML.
+Introduction
+------------
+
+> Converts Word Processor office files (e.g. .DOC files) to OpenDocument, DocBook, and structured HTML.
+
+*Docvert-agov* is a custom-themed version of [Docvert](http://docvert.com/) built for the ACT Government, specifically as an OOXML (`.docx`) to HTML converter. Additionally this version is supplemented with ‘install’ and run shell scripts to help automate deployment. Testing was done on Amazon EC2 servers.
+
+Technology
+----------
+
+Docvert utilises a daemon of LibreOffice to convert Microsoft Word documents → OpenDocument → DocBook → HTML via XSLT. This conversion approach makes use of ‘XML pipelines’ to stage the conversion and theme its output through XSLT, making it extensible and highly customisable.
+
+For more information see [the official FAQ](http://static.holloway.co.nz/docvert/faq.html#xml-pipelines) and the how-to on writing themes under `doc/`.
 
 
 Web Service
 -----------
 
     python ./docvert-web.py [-p PORT] [-H host]
+
 
 Command Line
 ------------
@@ -22,13 +35,19 @@ Command Line
         [--pipelinetype {tests,auto_pipelines,pipelines}]
         infile [infile ...]
 
+
 Community
 ---------
 
-http://lists.catalyst.net.nz/mailman/listinfo/docvert
+Mailing list: [http://lists.catalyst.net.nz/mailman/listinfo/docvert](http://lists.catalyst.net.nz/mailman/listinfo/docvert)
+
 
 Requirements
 ------------
+
+Docvert-agov was tested on Ubuntu 12.04 and 13.04 but should run on most *nix systems.
+
+### Dependencies
 
     Python 2.6 or 2.7 (we'll support Python 3 when it supports PyUNO)
     libreoffice
@@ -37,38 +56,57 @@ Requirements
     python-imaging
     pdf2svg
     librsvg2-2
-    
+    git (used in the optional install shell script)
+
 Quickstart Guide
 ----------------
 
-    sudo apt-get install libreoffice python-uno python-lxml python-imaging pdf2svg librsvg2-2
+### Install
 
-    /usr/bin/soffice --headless --norestore --nologo --norestore --nofirststartwizard --accept="socket,port=2002;urp;"
+Download or clone a copy of the repository or simply grab the install script (`install-docvert.sh`). Use the install script if you are on Debian or Ubuntu and you want to skip the manual steps, which essentially are:
 
-then in another terminal
+1. Install dependencies via `apt-get`.
+2. Delete any existing Docvert files and fetch `master` of docvert-agov from GitHub.
 
-    cd ~
+To install, from the intended working directory execute the install script:
 
-    git clone git://github.com/holloway/docvert.git
+    ./install-docvert.sh
 
-    cd docvert
+To deploy on other systems use their respective package managers to install the required dependencies.
 
-    python ./docvert-web.py
+### Starting the web service
 
-and browse to http://localhost:8080
+Docvert relies on LibreOffice for conversion. We can start the daemon as follows:
 
-A note on the LibreOffice Daemon
+    /usr/bin/loffice -headless -norestore -nologo -norestore -nofirststartwizard -accept="socket,port=2002;urp;"
+
+This runs a single instance (if you want to run a pool of instances then try something like [Open Office Server Daemon](http://oodaemon.sourceforge.net/)).
+
+Starting this daemon and then launching Docvert’s web interface is automated by the `start-docvert.sh` bash script. Executing this will launch the LibreOffice daemon as well as serve the Python web front-end.
+
+
+Automating launch of the service
 --------------------------------
 
-If you want to convert Microsoft Office files you'll need to start a daemon:
+The service can be automated to launch on boot/reboot of a system.
 
-    /usr/bin/soffice -headless -norestore -nologo -norestore -nofirststartwizard -accept="socket,port=2002;urp;"
+This is done using the [cron daemon](https://en.wikipedia.org/wiki/Crontab) (a job scheduler). To tell the system to launch the start script each time the system boots an instruction is added to the cron table (the table of scheduled tasks) by calling `crontab` and parsing it the edit option (`-e`):
 
-This runs a single instance. If you want to run a pool of instances then try something like http://oodaemon.sourceforge.net/
+	$ crontab -e
+
+This will open the cron table file using the user- or system-defined text editor. The line to add is:
+
+	@reboot /home/ubuntu/start-docvert.sh
+
+If docvert has been installed elsewhere ensure the path to the start script matches its location.
 
 
 LICENCE
 -------
-Released under the GPL3 see LICENCE
+Released under the GNU GPL3 see `LICENCE`.
 
 
+Misc
+----
+
+This readme file is based on the original docvert readme.

@@ -32,7 +32,11 @@ import core.docvert_storage
 import core.docvert_exception
 import core.document_type
 
+<<<<<<< HEAD
 # START DEFAULT CONFIG
+=======
+# START CONFIG
+>>>>>>> ca25f1f60389d12a751bfc7f535fa7eb257cc7dd
 theme='actgov'
 host='localhost'
 port=8080
