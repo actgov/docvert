@@ -22,7 +22,7 @@
       <ul id="main">
     		<li><a href="mailto:pascal.klein@act.gov.au">Contact</a></li>
         <li><a href="tests">Tests</a></li>
-        <li class="current"><a href="#menu">Web Service</a></li>
+        <li class="current">Web Service</li>
       </ul>
     </nav>
 		

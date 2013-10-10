@@ -11,17 +11,9 @@ body
 
 #content
 	{
-	width: 640px;
 	background-color: #ffffff;
 	color: #222;
-	border-radius: 0.275em;
-	-moz-border-radius: 0.275em;
-	-webkit-border-radius: 0.275em;
-	-webkit-box-shadow: 0px 0px 12px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow:    0px 0px 12px rgba(50, 50, 50, 0.75);
-	box-shadow:         0px 0px 12px rgba(50, 50, 50, 0.75);
 	font-size: 15px;
-	margin-left: 1em;
 	}
 
 #introduction
@@ -46,19 +38,19 @@ body
 #menu
     {
     position:absolute;
-    left:500px;
-    top:0px;
+    left:500;
+    top:0;
     list-style:none;
     font-size:small;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     }
 
     #menu li
         {
         float:right;
         padding:0 0 0.5em 1px;
-        margin:0px;
+        margin:0;
         }
 
         #menu li.current a
@@ -73,7 +65,7 @@ body
             {
             background: #333;
             color: white;
-            text-shadow: black 0px 0px 2px;
+            text-shadow: black 0 0 2px;
             border-top: 2px solid #333;
             padding:0.5em 1em;
             display:block;
@@ -99,10 +91,10 @@ body
 h1
     {
     position: absolute;
-    top: 140px;
+    top: 140;
     left: 0;
     color:#999;
-    text-shadow: #222 0px 0px 3px;
+    text-shadow: #222 0 0 3px;
     font-size:32px;
     letter-spacing: -0.1em;
     transform: rotate(-90deg);
@@ -137,15 +129,14 @@ fieldset
     border: solid 1px #eeeeee;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    margin: 0px 0px 1em 0px;
+    margin: 0 0 1em 0;
     }
 
     #advanced_off,
     fieldset legend
         {
-        padding: 0px 1em 0px 2px;
-        font-weight:bold;
-        color:#999999;
+        padding: 0 1em 0 .25em;
+        color: #999999;
         }
 
 code
@@ -181,7 +172,6 @@ abbr
     .upload_button label
         {
         padding-top: 0.25em;
-        padding-bottom: 1em;
         border: solid 1px #aaaaaa;
         float:left;
         background: #eeeeee;
@@ -191,13 +181,13 @@ abbr
         background: -webkit-gradient(linear, left bottom, left top, from(#bbb), to(#eee));
         background: -moz-linear-gradient(bottom, #bbb, #eee);
         -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
-	    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
         }
 
         .upload_button label span
             {
             display:block;
-            padding: 1px 7px 7px 1px;
+            padding: 0.1em 0.3em 0.3em 0.1em;
             text-align:center;
             font-size:large;
             font-weight:bold;
@@ -290,8 +280,8 @@ div.inner input[type="radio"]
 
 h2.upload_list
     {
-    margin:0px;
-    padding:1em 0px 0px 0px;
+    margin:0;
+    padding:1em 0 0 0;
     font-size:medium;
     color:#555555;
     clear:both;
@@ -301,8 +291,8 @@ h2.upload_list
 #upload_list
     {
     list-style:none;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     font-size:small;
     }
 
@@ -313,7 +303,7 @@ h2.upload_list
         -moz-border-radius:5px;
         padding:1px 1px 1px 0.6em;
         color:#666666;
-        margin:0px 0.6em 5px 0px;
+        margin:0 0.6em 5px 0;
         float:left;
         border: solid 1px #cccccc;
         }
@@ -325,7 +315,7 @@ h2.upload_list
             text-shadow: #ffffff 1px 1px 1px;
             border-radius:4px;
             -moz-border-radius:4px;
-            padding:0px 5px;
+            padding:0 5px;
             margin-left:0.4em;
             text-decoration:none;
             }
@@ -372,7 +362,7 @@ h2.upload_list
  
     a.dropdown
         {
-        padding: 0px;
+        padding: 0;
         border: solid 1px #aaaaaa;
         background: #eeeeee;
         color:#666666;
@@ -432,17 +422,17 @@ h2.upload_list
 
 #afterconversion
     {
-    color:#555555;
-    margin:0px;
+    color: #555555;
+    margin: 0;
     padding: 0.3em 0.4em;
     }
 
 #submit_error
     {
     text-align:center;
-    margin:0px;
-    padding:0px;
-    display:none;
+    margin: 0;
+    padding: 0;
+    display: none;
     }
 
     #submit_error span
@@ -453,7 +443,7 @@ h2.upload_list
         color: #666633;
         border-radius: 5px;
         -moz-border-radius: 5px;
-        font-size:small;
+        font-size: small;
         }
 
 #autopipelines_options
@@ -464,8 +454,8 @@ h2.upload_list
 p.note
     {
     text-align:center;
-    margin:0px 0px 10px 0px;
-    padding:0px;
+    margin: 0 0 10 0;
+    padding: 0;
     }
 
     p.note span
@@ -476,7 +466,7 @@ p.note
         color: #666633;
         border-radius: 2px;
         -moz-border-radius: 2px;
-        font-size:small;
+        font-size: small;
         }
 
 #advanced
@@ -485,14 +475,14 @@ p.note
 
     #advanced legend a
         {
-        color:#888888;
-        text-decoration:none;
+        color: #888888;
+        text-decoration: none;
         }
 
     #advanced .showHide
         {
-        font-size:small;
-        color:#aaaaaa;
+        font-size: small;
+        color: #aaaaaa;
         }
 
 
@@ -500,46 +490,46 @@ p.note
 
 #conversion-tabs
     {
-    margin:30px 0px 0px 0px;
-    padding:0px;
-    list-style:none;
-    clear:both;
+    margin: 30 0 0 0;
+    padding: 0;
+    list-style: none;
+    clear: both;
     }
 
     #conversion-tabs li
         {
-        float:left;
+        float: left;
         margin-right: 1em;
         border: solid 2px #bbbbbb;
-        border-bottom: 0px;
+        border-bottom: 0;
         border-radius: 5px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         background: white;
         }
 
         #conversion-tabs li a
             {
-            text-decoration:none;
+            text-decoration: none;
             color: #666666;
-            padding:0.3em 5px 5px 5px;
-            float:left;
-            font-size:small;
+            padding: 0.3em 5px 5px 5px;
+            float: left;
+            font-size: small;
             }
 
 #conversion-navigation-tabs
     {
-    margin:0px 0px 1em 0px;
-    padding:0px 0px 1em 0px;
-    list-style:none;
-    clear:both;
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 0;
+    list-style: none;
+    clear: both;
     }
 
     #conversion-navigation-tabs li
         {
-        float:left;
-        margin-right:1em;
-        padding:2px 5px;
+        float: left;
+        margin-right: 1em;
+        padding: 2px 5px;
         border-radius: 5px;
         -moz-border-radius: 5px;
         }
@@ -556,7 +546,7 @@ p.note
 
         #conversion-navigation-tabs .zip-download a
             {
-            color:#666666;
+            color: #666666;
             }
 
     #conversion-navigation-tabs .back-link
@@ -586,7 +576,7 @@ p.note
     {
     background: white;
     border: solid 2px #bbbbbb;
-    border-top: 0px;
+    border-top: 0;
     clear:both;
     width:100%;
     }
@@ -599,16 +589,16 @@ body.tests-page
 
     body.tests-page h2
         {
-        margin-left:40px;
+        margin-left:40;
         font-weight:normal;
         }
 
     body.tests-page ul.tests
         {
         list-style:none;
-        padding:0px 0px 0px 2px;
-        width:700px;
-        margin-left:40px;
+        padding:0 0 0 2px;
+        width:700;
+        margin-left:40;
         }
 
         body.tests-page ul.tests li
@@ -618,7 +608,7 @@ body.tests-page
 
             body.tests-page ul.tests li a
                 {
-                padding:5px 10px;
+                padding:5px 10;
                 display:block;
                 text-decoration:none;
                 border-radius: 4px;
@@ -634,8 +624,8 @@ body.tests-page
 
                 body.tests-page ul.tests ul
                     {
-                    margin:0px 5px 0px 33px;
-                    padding:0px 0px 0px 4px;
+                    margin:0 5px 0 33px;
+                    padding:0 0 0 4px;
                     background: #dddddd;
                     font-size:small;
                     border-bottom-right-radius: 5px;
@@ -650,8 +640,8 @@ body.tests-page
 
                     body.tests-page ul.tests ul li
                         {
-                        margin:0px;
-                        padding:5px 0px 5px 5px;
+                        margin:0;
+                        padding:5px 0 5px 5px;
                         color:#666666;
                         }
 
@@ -670,8 +660,8 @@ body.tests-page
                     background:#bbbbbb;
                     border: inset 1px #cccccc;
                     font-weight:bold;
-                    padding:0px 5px;
-                    margin: 0px 5px 0px 0px 
+                    padding:0 5px;
+                    margin: 0 5px 0 0 
                     }
 
                     body.tests-page ul.tests li .result
@@ -703,14 +693,14 @@ body.tests-page
                         {
                         color:#666666;
                         font-weight:bold;
-                        margin: 0px 3px;
+                        margin: 0 3px;
                         }
 
     #libreOfficeStatus
         {
         float:left;
         padding:2px 5px 4px 5px;
-        margin:0px 0px 0px 36px;
+        margin:0 0 0 36px;
         font-size:x-small;
         border-bottom-right-radius: 5px;
         -moz-border-radius-bottomright: 5px;
