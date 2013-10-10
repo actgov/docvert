@@ -9,7 +9,7 @@
         <title>Docvert&thinsp;&mdash;&thinsp;Web Service</title>
         
         <link rel="stylesheet" type="text/css" href="static/actgov/normalize.css">
-        <link rel="stylesheet" type="text/css" href="static/actgov/bootsrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/actgov/bootstrap.min.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="static/actgov/screen.css">
         <script type="text/javascript" src="lib/jquery/jquery-1.5.min.js"></script>
