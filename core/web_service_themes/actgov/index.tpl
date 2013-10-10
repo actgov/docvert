@@ -37,7 +37,7 @@
         	<li>this conversion system is open source software</li>
         </ul>
       </div><!-- closes #introduction -->
-    </header
+    </header>
 		
 		<section id="content">
 		  <form method="post" action="web-service" enctype="multipart/form-data">
