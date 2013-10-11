@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ACT Government Docvert trial">
 		<meta name="author" content="ACT Government">
-    <title>Docvert&thinsp;&mdash;&thinsp;Web Service</title>
-        
-    <link rel="stylesheet" type="text/css" href="static/actgov/normalize.css">
+    <title>Docvert&thinsp;&mdash;&thinsp;web service</title>
+
     <link rel="stylesheet" type="text/css" href="static/actgov/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="static/actgov/screen.css">
+
     <script type="text/javascript" src="lib/jquery/jquery-1.5.min.js"></script>
     <script type="text/javascript" src="static/actgov/jquery.dropp.js"></script>
     <script type="text/javascript" src="static/actgov/index.js"></script>
@@ -61,9 +61,9 @@
             <legend>Theme (<abbr title="Extensible Markup Language">XML</abbr> Pipeline)</legend>
             <label for="pipeline">
               <select name="pipeline" id="pipeline">
-% for pipeline in sorted(pipelines):
+                % for pipeline in sorted(pipelines):
                 <option value="{{pipeline['id']}}">{{pipeline['name']}}</option>
-% end			
+                % end			
               </select>
             	Select an output format. For <abbr title="HyperText Markup Language">HTML</abbr> select <em>Web Standards</em>
             </label>
@@ -77,9 +77,9 @@
             <div id="autopipelines_options">
               <p class="note"><span>Please note that some pipelines don&rsquo;t support multiple pages.</span></p>
             	<select name="autopipeline" id="autopipeline">
-% for auto_pipeline in auto_pipelines:
+                % for auto_pipeline in auto_pipelines:
             	  <option value="{{auto_pipeline['id']}}">{{auto_pipeline['name']}}</option>
-% end			
+                % end			
 							</select>
             </div>
           </fieldset>
@@ -93,7 +93,7 @@
                 <label for="after_conversion_preview"><input type="radio" id="after_conversion_preview" name="afterconversion" value="preview" checked="checked">Preview conversion</label> &nbsp;
             	  <label for="after_conversion_zip"><input type="radio" id="after_conversion_zip" name="afterconversion" value="zip">Download .ZIP</label>
               </p>
-            </div> <!-- closes .inner -->
+            </div>
           </fieldset>
           <div id="submit_error">
             <span>Please choose a file or web <abbr title="Uniform Resource Locator">URL</abbr> to convert</span>
@@ -105,5 +105,8 @@
 				<div id="libreOfficeStatus" class="libreOfficeStatus_{{libreOfficeStatus}}">LibreOffice <span></span></div>
 			</form>
 		</section>
+		<footer>
+		  <p>foobar</p>
+		</footer>
 	</body>
 </html>
