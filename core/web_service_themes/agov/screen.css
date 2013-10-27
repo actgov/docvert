@@ -1,0 +1,95 @@
+/*
+----------------------------------
+  Page elements
+  
+*/
+
+body
+  {
+  padding: 1.5em 0.5em;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.6;
+  font-family: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  }
+  
+nav
+  {
+  }
+
+header
+  {
+  
+  }
+  
+
+/*
+----------------------------------
+  Navigation styling
+  
+*/
+
+#nav-main
+  {
+  list-style: none;
+  }
+
+  #nav-main li
+    {
+    float: right;
+    padding: 0 0 0.5em 1px;
+    }
+
+    #nav-main li a
+      {
+      padding: 0.5em 1em;
+      display: block;
+      text-decoration: none;
+      }
+
+/*
+----------------------------------
+  Header styling
+  
+*/
+
+
+/*
+----------------------------------
+  Forms
+  
+*/
+
+
+
+/*
+----------------------------------
+  Typography
+  
+*/
+
+h1, h2, h3, h4, h5, h6
+  {
+  
+  }
+
+strong
+  {
+  font-weight: 600;
+  }
+
+abbr
+  {
+  border-bottom: none;
+  }
+
+code
+	{
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	background-color: rgba(255,255,255,0.1);
+	padding: 2px 4px;
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	}

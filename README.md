@@ -58,12 +58,12 @@ Docvert-agov was tested on Ubuntu 12.04 and 13.04 but should run on most *nix sy
     librsvg2-2
     git (used in the optional install shell script)
 
-Quickstart Guide
+Quickstart guide
 ----------------
 
 ### Install
 
-Download or clone a copy of the repository, simply grab the install script (`install-docvert.sh`). Use the install script if you are on Debian or Ubuntu and you want to skip the manual steps, which essentially are:
+Download/clone a copy of the repository or simply grab the install script (`install-docvert.sh`). Use the install script if you are on Debian or Ubuntu and you want to skip the manual steps, which essentially are:
 
 1. Install dependencies (via `apt-get`).
 2. Delete the docvert directory and fetch/re-fetch `master` of docvert-agov from GitHub.
@@ -100,7 +100,7 @@ This is done using the [cron daemon](https://en.wikipedia.org/wiki/Crontab) (a j
 
 This will open the cron table file using the user- or system-defined text editor. The line to add is:
 
-	@reboot /home/ubuntu/start-docvert.sh
+	@reboot /home/ubuntu/docvert-agov/start-docvert.sh
 
 If docvert has been placed elsewhere ensure the path to the start script matches its location.
 
